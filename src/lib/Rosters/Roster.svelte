@@ -278,11 +278,10 @@
 		</Head>
 		<Body>
 			<!-- 	Starters	 -->
-			{#each finalStarters as starter}
-				<RosterRow player={starter} />
-			{/each}
 			<Row class="interactive" on:click={toggleSelected}>
-				<Cell colspan=4 class="{division}"><h5><Icon class="material-icons icon">king_bed</Icon> Bench <span class="italic">({status})</span></h5></Cell>
+				{#each finalStarters as starter}
+					<RosterRow player={starter} />
+				{/each}
 			</Row>
 		</Body>
 	</DataTable>
